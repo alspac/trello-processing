@@ -239,6 +239,7 @@ if __name__ == "__main__":
       with open(os.path.join(output_dir, 'trello_{board_name}.checklists.{date}.csv').format(board_name = re.sub('[\s\.\/]', '_', data['name']), date = datestamp), 'w') as dump_file:
         writer = csv.writer(dump_file)
         for line in processed_flat:
+          line=[s.encode('utf-8') for s in line]
           writer.writerow(line)
 
       # print success for board
