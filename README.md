@@ -9,3 +9,6 @@ On a Windows platform, output_dir should look something like o:\code\trello-proc
 Get the board id's using the trello API.
 
 Go to developers.trello.com to get key, token
+
+## run
+path/to/python processBoardJson.py
